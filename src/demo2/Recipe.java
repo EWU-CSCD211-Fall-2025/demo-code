@@ -35,7 +35,4 @@ public class Recipe {
 		return ingredients; 
 	}
 	
-	public static void main(String[] args) {
-		
-    }
 }
