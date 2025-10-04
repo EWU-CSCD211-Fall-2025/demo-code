@@ -1,9 +1,9 @@
-package demo2;
+package demo2.better;
 
 /**
 * Represents a recipe with a name and ingredients.
 */
-public class Recipe {
+public abstract class Recipe implements IRecipe {
 	
 	/** Recipe name. */
 	private String name;
@@ -41,5 +41,12 @@ public class Recipe {
 		return ingredients; 
 	}
 
+	protected void prepare() {
+		System.out.println("Preparing ingredients for recipe " + format('|'));
+	}
+	
+	protected String format(char separator) {
+		return name + separator + ingredients;
+	}
 	
 }

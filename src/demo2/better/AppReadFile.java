@@ -1,5 +1,5 @@
 
-package demo2;
+package demo2.better;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -28,8 +28,13 @@ public class AppReadFile {
 					String name = parts[0].trim();
 					String ingredients = parts[1].trim();
 					
-					recipes.add(new Recipe(name, ingredients));
+				
+					if (name.equals("Fried Rice") || name.equals("Cake")) {
+						recipes.add(new RecipeBaking(name, ingredients, 20, 300));
 					
+					} else {
+						recipes.add(new RecipeChilling(name, ingredients, 30));
+					}
 				}
 				
 			}
@@ -41,7 +46,8 @@ public class AppReadFile {
 		}
 		
 		for (Recipe r : recipes) {
-			System.out.println("Recipe: " + r.getName() + ", " + r.getIngredients());
+			r.makeRecipe();
+			System.out.println();
 		}
 		
 	}
