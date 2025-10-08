@@ -3,11 +3,14 @@ package demo1;
 public class Lawyer extends Employee {
 	
 	public Lawyer() {
-		super(0);
+		super(0, "default name");
 		System.out.println("init");
 	}
 	
-	
+	public Lawyer(int years, String name) {
+		super(years, name);
+		System.out.println("initializing Lawyer");
+	}
 	
 	@Override
 	public double getSalary() {
@@ -15,10 +18,7 @@ public class Lawyer extends Employee {
 	}
 	
 	
-	public Lawyer(int years) {
-		super(years);
-		System.out.println("init");
-	}
+	
 	
 	@Override
 	public int getVacationDays() {
@@ -31,6 +31,10 @@ public class Lawyer extends Employee {
 	
 	public void sue() {
 		System.out.println("I'm suing you because I have " + getYears() + " years of experience.");
+	}
+	
+	public String toString() {
+		return super.toString() + ", Salary: " + getSalary();
 	}
 
 }

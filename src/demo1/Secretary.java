@@ -2,8 +2,8 @@ package demo1;
 
 public class Secretary extends Employee {
 	
-	public Secretary(int years) {
-		super(years);
+	public Secretary(int years, String name) {
+		super(years, name);
 		// TODO Auto-generated constructor stub
 	}
 

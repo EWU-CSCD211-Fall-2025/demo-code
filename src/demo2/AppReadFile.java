@@ -12,10 +12,31 @@ public class AppReadFile {
 
 	public static void main(String[] args) {
 		
-		List<Recipe> recipes = new ArrayList<>();
+//		throw new FileNotFoundException("my exception");
+		
+//		Object o = new Object();
+		
+		ArrayList<Recipe> recipes = new ArrayList<>();
 
-
-		try (BufferedReader br = new BufferedReader(new FileReader("recipes.txt"))) {
+		ArrayList<String> stringArrayList = new ArrayList<>();
+		stringArrayList.add("a string");
+		stringArrayList.add("another String");
+		
+		ArrayList<Boolean> blist = new ArrayList<>();
+		
+		blist.add(true);
+		blist.add(false);
+		blist.set(0, false);
+		System.out.println("blist at index 0 is " + blist.get(0));
+		
+		System.out.println("hello           1223\n\n" + " world ");
+		
+		// will this work?
+//		ArrayList<boolean> booleanList = new ArrayList<>();
+		
+		try (
+				
+		BufferedReader br = new BufferedReader(new FileReader("recipes.txt"))) {
 			
 			String line;
 			
@@ -35,14 +56,28 @@ public class AppReadFile {
 			}
 			
 		} catch (IOException e) {
-			
-			e.printStackTrace();
+			String message = e.getMessage();
+//			System.out.println("Message: " + message);
+//			e.printStackTrace();
 			
 		}
 		
-		for (Recipe r : recipes) {
-			System.out.println("Recipe: " + r.getName() + ", " + r.getIngredients());
+		// iterating:
+		
+		for (int i = 0; i < recipes.size(); i++) {
+			Recipe r = recipes.get(i);
+			System.out.println("Recipe: " + r.getName() + "; " + r.getIngredients());
 		}
+		System.out.println("\n is equivalent to: ");
+		
+		for (Recipe r : recipes) { // what is the : doing here?
+			System.out.println("Recipe: " + r.getName() + "; " + r.getIngredients());
+		}
+		
+		// will this work? why or why not?
+//		for (Character c : "a string") {
+//			System.out.println("Character c: " + c);
+//		}
 		
 	}
 

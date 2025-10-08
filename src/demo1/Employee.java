@@ -3,9 +3,11 @@ package demo1;
 public class Employee {
 	
 	private int years;
+	private String name;
 	
-	public Employee(int years) {
+	public Employee(int years, String name) {
 		this.years = years;
+		this.name = name;
 	}
 	
 	
@@ -27,6 +29,11 @@ public class Employee {
 	
 	public String getVacationForm() {
 		return "yellow";
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee Name: " + name + ", Number of year worked: " + years;
 	}
 
 }

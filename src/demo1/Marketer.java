@@ -2,8 +2,8 @@ package demo1;
 
 public class Marketer extends Employee {
 	
-	public Marketer(int years) {
-		super(years);
+	public Marketer(int years, String name) {
+		super(years, name);
 		// TODO Auto-generated constructor stub
 	}
 
