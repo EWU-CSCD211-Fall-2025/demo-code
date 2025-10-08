@@ -1,6 +1,6 @@
 package demo1;
 
-public class Building {
+public class Building{
 
         private String material;
         private int windows;
