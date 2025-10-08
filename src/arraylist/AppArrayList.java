@@ -6,20 +6,6 @@ public class AppArrayList {
 
 	public static void main(String[] args) {
 		
-		// String[] 
-		
-		String[] stringArr = new String[5]; // set capacity when we declare 
-		
-		stringArr[2] = "a string";
-		
-		
-		for (int i = 0; i < stringArr.length; i++) {
-			System.out.println("stringArr[i]: " + stringArr[i]);
-		}
-		
-		
-		// ArrayList<String>
-		
 		ArrayList<String> stringList = new ArrayList<>();
 		
 		stringList.add("string 1");
