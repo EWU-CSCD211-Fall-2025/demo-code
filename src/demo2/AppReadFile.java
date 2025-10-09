@@ -36,7 +36,9 @@ public class AppReadFile {
 		
 		try (
 				
-		BufferedReader br = new BufferedReader(new FileReader("recipes.txt"))) {
+		BufferedReader br = new BufferedReader(new FileReader("recipes.txt"))
+		
+				) {
 			
 			String line;
 			

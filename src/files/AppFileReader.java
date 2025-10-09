@@ -1,6 +1,7 @@
 package files;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -19,7 +20,7 @@ public class AppFileReader {
 			int i = 0;
 			while ((i = fr.read()) != -1) {
 				
-				System.out.println("i = " + i + ", (char) i: " + (char) i);
+				System.out.println("(char)i = " + (char)i);
 			}
 			
 		}

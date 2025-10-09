@@ -47,6 +47,7 @@ public class AppReadFile {
 		
 		for (Recipe r : recipes) {
 			r.makeRecipe();
+			
 			System.out.println();
 		}
 		

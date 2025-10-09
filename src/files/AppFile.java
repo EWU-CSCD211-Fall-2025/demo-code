@@ -6,7 +6,7 @@ public class AppFile {
 	
 	public static void main(String[] args) {
 		
-		String fileName = "recipes.txt";
+		String fileName = "recipes1.txt";
 		
 		File file = new File(fileName);
 		

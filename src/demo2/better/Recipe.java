@@ -42,6 +42,7 @@ public abstract class Recipe implements IRecipe {
 	}
 
 	protected void prepare() {
+//		IRecipe.super.printRecipe();
 		System.out.println("Preparing ingredients for recipe " + format('|'));
 	}
 	
