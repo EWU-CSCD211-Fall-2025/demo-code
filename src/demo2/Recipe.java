@@ -3,10 +3,9 @@ package demo2;
 /**
 * Represents a recipe with a name and ingredients.
 */
-public class Recipe {
+public class Recipe extends RecipeAbstract implements IRecipe, INameable {
 	
-	/** Recipe name. */
-	private String name;
+	
 	
 	/** Recipe ingredients in text form. */
 	private String ingredients;
@@ -41,5 +40,21 @@ public class Recipe {
 		return ingredients; 
 	}
 
+	@Override
+	public void prepare() {
+		System.out.println("preparing " + getIngredients());
+		
+	}
+
+	@Override
+	public void setName(String name) {
+		
+		if (name.length() < NAME_MAX_LENGTH) {
+			this.name = name;
+		}
+		
+	}
+	
+	
 	
 }

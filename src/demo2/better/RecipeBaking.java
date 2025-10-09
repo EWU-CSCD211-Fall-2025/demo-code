@@ -21,7 +21,7 @@ public class RecipeBaking extends Recipe implements IBakeable {
 
 	@Override
 	public void bake() {
-		super.printRecipe();
+//		super.printRecipe();
 		System.out.println("Baking recipe [" + format('|') + "] for " + getBakingTime() + " minutes at " + getOvenTemp() + " degrees F");
 	}
 

@@ -12,7 +12,7 @@ public class AppReadFile {
 
 	public static void main(String[] args) {
 		
-		List<Recipe> recipes = new ArrayList<>();
+		List<IRecipe> recipes = new ArrayList<>();
 
 
 		try (BufferedReader br = new BufferedReader(new FileReader("recipes.txt"))) {
@@ -45,7 +45,7 @@ public class AppReadFile {
 			
 		}
 		
-		for (Recipe r : recipes) {
+		for (IRecipe r : recipes) {
 			r.makeRecipe();
 			
 			System.out.println();

@@ -68,6 +68,7 @@ public class AppReadFile {
 		
 		for (int i = 0; i < recipes.size(); i++) {
 			Recipe r = recipes.get(i);
+			r.prepare();
 			System.out.println("Recipe: " + r.getName() + "; " + r.getIngredients());
 		}
 		System.out.println("\n is equivalent to: ");
