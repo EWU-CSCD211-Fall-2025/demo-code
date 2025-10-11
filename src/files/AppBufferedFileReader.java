@@ -21,7 +21,7 @@ public class AppBufferedFileReader {
 		
 		System.out.println("Line: " + line);
 		
-		
+		br.close();
 		fr.close();
 		
 	}
