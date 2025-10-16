@@ -14,6 +14,9 @@ public class AppObjects {
 		System.out.println("p1 == p2? " + (p1.equals(p2)));
 		System.out.println("s1 == s2? " + (s1.equals(s2)));
 		
+		Point3D point3D = new Point3D(1, 2, 3);
+		System.out.println("point3D instanceof Point: " + (point3D instanceof Point));
+		
 	}
 	
 	
