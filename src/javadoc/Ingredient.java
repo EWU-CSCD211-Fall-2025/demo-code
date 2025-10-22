@@ -72,7 +72,9 @@ public class Ingredient extends Object {
 		} else if (!(o instanceof Ingredient)) {
 			return false;
 		} else {
-			Ingredient other = (Ingredient)o;
+			Ingredient other = (Ingredient) o;
+			
+			
 			return other.name.equals(name) && other.measurementUnit.equals(measurementUnit);
 		}
 		
