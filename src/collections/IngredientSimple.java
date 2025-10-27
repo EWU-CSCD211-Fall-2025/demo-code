@@ -1,6 +1,6 @@
 package collections;
 
-public class IngredientSimple {
+public class IngredientSimple implements Comparable<IngredientSimple> {
 	
 	private String name;
 	private String amount;
@@ -8,6 +8,12 @@ public class IngredientSimple {
 	public IngredientSimple(String name, String amount) {
 		this.name = name;
 		this.amount = amount;
+	}
+
+	@Override
+	public int compareTo(IngredientSimple o) {
+		
+		return name.compareTo(o.name);
 	}
 
 }

@@ -1,29 +1,35 @@
 package collections;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class RecipeSimple {
 	
+	private  List<IngredientSimple> ingredients;
+	
 	public RecipeSimple() {
-		throw new RuntimeException("Not implemented.");
+		ingredients = new ArrayList<>();
 	}
 	
 	public void addIngredient(IngredientSimple i) {
-		throw new RuntimeException("Not implemented.");
+		ingredients.add(i);
 	}
 	
 	public void sortIngredients() {
-		throw new RuntimeException("Not implemented.");
+		Collections.sort(ingredients);
 	}
 	
 	public void printIngredients() {
-		throw new RuntimeException("Not implemented.");
+		System.out.println(ingredients);
 	}
 	
 	public boolean containsIngredient(IngredientSimple i) {
-		throw new RuntimeException("Not implemented.");
+		return ingredients.contains(i);
 	}
 
 	public void removeIngredient(IngredientSimple i) {
-		throw new RuntimeException("Not implemented.");
+		ingredients.remove(i);
 	}
 
 }
