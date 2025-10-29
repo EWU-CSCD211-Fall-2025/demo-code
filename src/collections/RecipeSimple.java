@@ -6,7 +6,7 @@ import java.util.List;
 
 public class RecipeSimple {
 	
-	private  List<IngredientSimple> ingredients;
+	private List<IngredientSimple> ingredients;
 	
 	public RecipeSimple() {
 		ingredients = new ArrayList<>();
